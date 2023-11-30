@@ -7,15 +7,24 @@
 </head>
 <body>
   <script>
-    var x =0;
+    
     var count = prompt('what is the highest number we will reach?');
-    while( x < count ){
-      x++;
-      console.log(x);
-     if (x % 3 ==0) {
-      x = 'fizz';
-      console.log('fizz');
-     } 
+    for (let i =1; i <= count; i++ ){
+      
+      if (i % 3 === 0 && !(i % 5 === 0)){
+        console.log('fizz'); 
+      }
+      else if( i % 5 === 0 && !(i % 3 ===0)) {
+        console.log('buzz');
+      }
+      else if (i % 3 === 0 && i % 5 ===0) {
+        console.log('FizzBuzz');
+      }
+      else{
+        console.log(i);
+      }
+     
+   
     
     }
         
